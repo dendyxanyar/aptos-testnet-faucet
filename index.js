@@ -13,8 +13,8 @@ const rl = readline.createInterface({
 });
 
 console.log(cyan(``));
-console.log(cyan(`Aptos Devnet Auto Claim Faucet`));
-console.log(cyan(`by Zexalryz`));
+console.log(cyan(`Aptos Testnet Auto Claim Faucet`));
+console.log(cyan(`Recode by Dendy Romadhon`));
 console.log(cyan(``));
 console.log(cyan(``));
 
@@ -24,9 +24,9 @@ rl.question(chalk.bold.cyan('Paste your APTOS Address : '), (answer) => {
         console.log(cyan(`Address : ${answer}`));
     const config = {
 			method: 'post',
-			url: 'https://faucet.devnet.aptoslabs.com/mint',
+			url: 'https://faucet.testnet.aptoslabs.com/mint',
 			params: {
-      amount: '1000000',
+      amount: '2000000',
       address: (answer) ,
       return_txns: true,
   },
@@ -36,7 +36,7 @@ rl.question(chalk.bold.cyan('Paste your APTOS Address : '), (answer) => {
 axios(config)
 .then((response) => {
 			// console.log(JSON.stringify(response.data));
-			console.log(ijo(`Success Claim 1.000.00 $APT`));
+			console.log(ijo(`Success Claim $APT`));
 })
 .catch((error) => {
             console.log(eror('Error Bad Response / Wrong Address type'));
