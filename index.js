@@ -46,5 +46,5 @@ axios(config)
     }
   // TODO: Log the answer in a database
   
-  setInterval(faucet, 2000);
+  setInterval(faucet, 3000);
 });
